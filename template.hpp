@@ -1,3 +1,9 @@
+#ifndef TEMPHPP
+#define TEMPHPP
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,14 +19,7 @@ using ii = pair<int, int>;
 #define oo 1e9
 #define EPS 1e-9
 
-int casos,caso = 0;
 
-int main(){
-	int n;
-	scanf(" %d",&casos);
-	for(caso = 0;caso < casos;caso++){
-		scanf(" %d",&n);
-		FOR(i,n){
-		}
-	}
-}
+
+
+#endif//TEMPHPP
