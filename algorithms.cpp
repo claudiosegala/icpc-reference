@@ -2,10 +2,10 @@
 // DJIKSTRA       -need_revision
 ///////////////
 
-vector<int> dist;
+vector<int> dist; // answer -> dist[destiny]
 vector<vector<ii>> g; // u w v
 
-void djikstra(int src) { 
+void djikstra(int src = 1) { 
     dist.resize(g.size(), oo);
     priority_queue<ii, vector<ii>, greater<ii>> pq;
 
