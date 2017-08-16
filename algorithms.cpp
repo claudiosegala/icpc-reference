@@ -136,17 +136,14 @@ void merge_sort (int* v, int p, int r){
 next_permutation(myints,myints+3)
 prev_permutation(myints,myints+3)
 
-// para saber se é potencia de 2 basta
-bool is_power_of_2(int i) {
-    if ( i <= 0 ) {
+bool is_power_of_2(int n) {
+    if (n <= 0) {
         return 0;
     }
-    return ! (i & (i-1));
+    return !(n & (n - 1));
 }
 
-// le como heaxadecimal
-scanf("%x")
+scanf("%x"); // le como heaxadecimal
 
-// le como notação cientifica
-scanf("%e")
+scanf("%e"); // le como notação cientifica
 
