@@ -33,7 +33,7 @@ matriz MM(matriz x, matriz y){ // MATRIZ MULTIPLICATION
     for(int i = 0; i < 2; i++)
         for(int j = 0; j < 2; j++)
             k.v[i][j] = (x.v[i][0] * y.v[0][j] + x.v[i][1] * y.v[1][j]);
-    return k;
+    return k; 
 }
 
 matriz fastPot(matriz x, int exp){ // FASTPOT MATRIZ EDITION
