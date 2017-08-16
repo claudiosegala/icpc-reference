@@ -5,7 +5,7 @@
 vector<int> dist;
 vector<vector<ii>> g; // u w v
 
-void djikstra(int src) {
+void djikstra(int src) { 
 	dist.resize(g.size(), oo);
 	priority_queue<ii, vector<ii>, greater<ii>> pq;
 	
