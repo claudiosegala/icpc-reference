@@ -129,6 +129,16 @@ void merge_sort (int* v, int p, int r){
 }
 
 ///////////////
+// Bit Manipulation
+///////////////
+
+y = (x & (1 << i)) // Get the i-th bit
+
+x |= (1 << i) // Set the i-th bit
+
+x &= ~(1 << i) // Clear the i-th bit
+
+///////////////
 // Tips
 ///////////////
 
