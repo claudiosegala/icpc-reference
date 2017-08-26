@@ -109,3 +109,7 @@ bool is_power_of_2(int n) { return (n <= 0)? 0 : !(n & (n - 1)); }
 
 scanf("%x"); // le como heaxadecimal
 scanf("%e"); // le como notação cientifica
+
+sumOfLinears = n * (n + 1) * 0.5             // somatorio 1 + ... + n
+sumOfSquares = (n * (n + 1) * (2*n + 1)) / 6 // somatoria 1 + ... + n^2
+sumOfCubes   = sumLinear * sumLinear         // somatoria 1 + ... + n^3
