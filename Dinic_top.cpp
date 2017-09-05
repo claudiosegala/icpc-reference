@@ -43,9 +43,6 @@ int dfs(int x, int t, int flow){
 			if(currflow){
 				at.cp -= currflow;
 				adj[at.vv][at.nv].cp += currflow;
-				
-				cap[x][at.vv] -= currflow;
-				cap[at.vv][x] += currflow;
 
 				adj[x][v[x]] = at;
 				return currflow;
