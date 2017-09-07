@@ -1,7 +1,19 @@
 #define nv second   
 #define cp first.second
 #define vv first.first
-vector<pair<pair<int,int>, int> > adj[305];
+#define nv second.first   
+#define cp first.second
+#define vv first.first
+#define oo 1000000000
+#define ff first
+#define ss second
+#define mp make_pair
+#define pb push_back
+
+int level[1000005];
+int v[1000005];
+int maxflow;
+vector<pair<pair<int,int>, int> > adj[100005];
 
 void add_edge(int v, int u, int cap){
 	adj[v].pb(mp(mp(u,cap),adj[u].size()));
