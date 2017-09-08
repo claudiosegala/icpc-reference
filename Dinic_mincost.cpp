@@ -15,6 +15,7 @@ int vis[1000005];
 vector<pair<pair<int,int>, pair<int,int> > > adj[1000005];
 int maxflow;
 long long mincost;
+int ed;
 
 void add_edge(int v, int u, int cap, int pes){
 	adj[v].pb(mp(mp(u, cap), mp(adj[u].size(), pes)));
@@ -45,12 +46,12 @@ int dij(int s, int t){
 pair<int,long long> dfs(int x, int t, int flow){
 	if(vis[x]) return mp(0,0);
 	if(x == t) return mp(flow,0);
- 	
  	vis[x] = 1;
+
 	for(; v[x] < adj[x].size(); v[x]++){
 		pair<pair<int,int>, pair<int,int> > at = adj[x][v[x]];
 		
-		if(level[at.vv] == level[x] + at.wt && at.cp > 0){
+		if(level[at.vv] >= level[x] + at.wt && at.cp > 0){
 			pair<int, long long> currflow;
 			currflow.ff = min(flow,at.cp);
 			currflow = dfs(at.vv, t, currflow.ff);
@@ -64,22 +65,21 @@ pair<int,long long> dfs(int x, int t, int flow){
 			}
 		}
 	}
-	vis[x] = 0;
+	vis[x] = 0;	
 	return mp(0,0);
 }
 
 void dinic(int s,int t){
 	while(1){
-		for(int i = 0; i < 1000000; i++) level[i] = OO;
+		for(int i = 0; i <= ed; i++) level[i] = OO;
 		if(dij(s,t)) break;
 
 		memset(v, 0, sizeof v);
+		
 		pair<int,long long> temp;
-		while(1){
-			temp = dfs(s,t,oo);
-			if(!temp.ff) break;
-			maxflow += temp.ff;
-			mincost += temp.ss;
-		}
+		temp = dfs(s,t,oo);
+		if(!temp.ff) break;
+		maxflow += temp.ff;
+		mincost += temp.ss;
 	}
 }
