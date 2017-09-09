@@ -1,2 +1,3 @@
-# icpc-reference
-Short reference to ACM ICPC
+# ICPC Reference
+
+Reference for Batatas de Bermudas in ACM-ICPC.

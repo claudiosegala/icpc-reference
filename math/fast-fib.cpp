@@ -6,7 +6,7 @@ matriz MM(matriz x, matriz y){ // MATRIZ MULTIPLICATION
     for(int i = 0; i < 2; i++)
         for(int j = 0; j < 2; j++)
             k.v[i][j] = (x.v[i][0] * y.v[0][j] + x.v[i][1] * y.v[1][j]);
-    return k;
+    return k; 
 }
 
 matriz fastPot(matriz x, int exp){ // FASTPOT MATRIZ EDITION
@@ -15,9 +15,8 @@ matriz fastPot(matriz x, int exp){ // FASTPOT MATRIZ EDITION
     return fastPot(MM(x, x), exp/2);
 }
 
-int main() {
-    I.v[0][0] = 1; I.v[0][1] = 0; I.v[1][0] = 0; I.v[1][1] = 1; // matriz identidade
-    FIB.v[0][0] = 1; FIB.v[0][1] = 1; FIB.v[1][0] = 1; FIB.v[1][1] = 0;
+void startFastPot(int N) {      // resposta está em FIB.v[1][0]
+    I.v[0][1] = I.v[1][0] = 0; I.v[0][0] = I.v[1][1] = 1; // matriz identidade
+    FIB.v[0][0] = FIB.v[0][1] = FIB.v[1][0] = 1; FIB.v[1][1] = 0;
     FIB = fastPot(INI, N); // N é o n-ézimo número de fibonacci
- 	// resposta está em FIB.v[1][0]
 }

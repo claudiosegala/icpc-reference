@@ -1,4 +1,3 @@
-vimrc##############################################  
 set number 
 set showmatch  
 set autoindent  
