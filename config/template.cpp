@@ -3,10 +3,10 @@ using namespace std;
 
 #define FILL(X, V)           memset((X), (V), sizeof(X))
 #define SIZE(V)              int((V).size())
-#define FOR2(cont,start,max) for(int (cont) = (start), _MAX = (max); (cont) < _MAX; (cont)++)
+#define FOR2(c,i,j) for(int(c)=(i),_MAX=(j);(c)<_MAX;(c)++)
 #define FOR(cont,max)        FOR2((cont), 0, (max))
 #define LOG(x)               (31 - __builtin_clz(x))
-#define W(x)                 cerr << "\033[31m" << #x << " = " << x << "\033[0m" << endl;
+#define W(x)                 cerr << "\033[31m" << #x << "=" << x << "\033[0m" << "\n";
 #define ii 					 pair<int, int>
 #define ff 					 first
 #define ss 					 second

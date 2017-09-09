@@ -1,4 +1,3 @@
-
 const int N = 10000000;
 int lp[N + 1];
 int phi[N + 1];

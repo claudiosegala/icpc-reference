@@ -7,18 +7,15 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 
-
-\usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm, landscape]{geometry}
+\usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm,landscape]{geometry}
 
 \usepackage{multicol}
-%\setlength{\columnseprule}{.5pt}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Batatas de Bermudas [UnB]}
-\chead{}
+\lhead{[UnB] Batatas de Bermudas}
 \rhead{\thepage}
-\cfoot{Universidade de Brasília \\ Team Reference Material}
+\cfoot{Universidade de Brasília}
 
 \usepackage{color}
 \definecolor{cstrings}{rgb}{0.6,0,0}
@@ -26,12 +23,7 @@
 \definecolor{ckeywords}{rgb}{0.25,0.35,0.75}
 
 \usepackage{listings}
-\lstset{
-  language = C++,
-  tabsize = 4,
-  basicstyle = \scriptsize\ttfamily,
-  columns = fullflexible
-}
+\lstset{language=C++,tabsize=4,basicstyle=\scriptsize\ttfamily,columns=fullflexible}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%   Commands 
@@ -68,11 +60,16 @@
 
 \section{Intro}
 \addS{c++}{Template}{config}{template.cpp}
-\addS{c++}{Vim Configuration}{config}{vim}
+\addS{c++}{Vim Configuration}{config}{vimrc.cpp}
 
 \section{Ad-Hoc}
-\addS{c++}{Template}{config}{template.cpp}
-\addS{c++}{Vim Configuration}{config}{vim}
+\addS{c++}{Debrujin}{ad-hoc}{debruijn.cpp}
+\addS{c++}{Josephus Problem}{ad-hoc}{josephus.cpp}
+\addS{c++}{LIS}{ad-hoc}{lis.cpp}
+\addS{c++}{Subsets}{ad-hoc}{subsets.cpp}
+\addS{c++}{Josephus Problem}{ad-hoc}{subsets.cpp}
+\addS{c++}{Fib in Compile Time}{ad-hoc}{compile_time_fib.cpp}
+\addS{c++}{Tips}{ad-hoc}{tips.cpp}
 
 \section{Geometry}
 

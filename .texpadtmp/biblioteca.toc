@@ -1,0 +1,15 @@
+\contentsline {section}{Intro}{2}
+\contentsline {subsection}{Template}{2}
+\contentsline {subsection}{Vim Configuration}{2}
+\contentsline {section}{Ad-Hoc}{2}
+\contentsline {subsection}{Debrujin}{2}
+\contentsline {subsection}{Josephus Problem}{2}
+\contentsline {subsection}{LIS}{2}
+\contentsline {subsection}{Subsets}{3}
+\contentsline {subsection}{Josephus Problem}{3}
+\contentsline {subsection}{Fib in Compile Time}{3}
+\contentsline {subsection}{Tips}{3}
+\contentsline {section}{Geometry}{3}
+\contentsline {section}{Graph}{3}
+\contentsline {section}{Math}{3}
+\contentsline {section}{String}{3}
