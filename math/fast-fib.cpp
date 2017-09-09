@@ -15,8 +15,8 @@ matriz fastPot(matriz x, int exp){ // FASTPOT MATRIZ EDITION
     return fastPot(MM(x, x), exp/2);
 }
 
-void startFastPot(int N) {      // resposta está em FIB.v[1][0]
+void startFastPot(int N) {      // resposta esta em FIB.v[1][0]
     I.v[0][1] = I.v[1][0] = 0; I.v[0][0] = I.v[1][1] = 1; // matriz identidade
     FIB.v[0][0] = FIB.v[0][1] = FIB.v[1][0] = 1; FIB.v[1][1] = 0;
-    FIB = fastPot(INI, N); // N é o n-ézimo número de fibonacci
+    FIB = fastPot(INI, N); // N eh o n-ezimo numero de fibonacci
 }

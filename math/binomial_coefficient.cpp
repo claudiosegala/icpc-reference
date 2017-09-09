@@ -1,4 +1,4 @@
-long binomial_coefficient(n,m){ /* Calculo de Arranjo Rápido */
+long binomial_coefficient(n,m){ /* Calculo de Arranjo Rapido */
 	int n,m;
 	int i,j;
 	long bc[MAXN][MAXN];

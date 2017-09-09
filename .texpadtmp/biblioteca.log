@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 SEP 2017 22:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 SEP 2017 23:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -543,18 +543,18 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ) (/Users/segala/Git/icpc-reference/.texpadtmp/biblioteca.aux)
 \openout1 = `biblioteca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
  (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count120
@@ -659,7 +659,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 62.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) (./config/template.cpp
@@ -673,20 +673,55 @@ Overfull \hbox (9.32957pt too wide) in paragraph at lines 2--3
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./ad-hoc/tips.cpp) [3] (/Users/segala/Git/icpc-reference/.texpadtmp/biblioteca.aux) ) 
+) (./ad-hoc/tips.cpp) (./graph/Bron_Kerbosh.cpp) (./graph/Dinic_mincost.cpp [3]) (./graph/Dinic_top.cpp [4]) (./graph/Edmonds-Karp.cpp
+Overfull \hbox (23.72937pt too wide) in paragraph at lines 40--41
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [5] (./graph/MaxClique_MeetInTheMiddle.cpp) (./graph/bip_match.cpp [6]) (./graph/djikstra.cpp) (./graph/floyd_warshall.cpp) (./graph/graph-paths.cpp
+Overfull \hbox (206.1297pt too wide) in paragraph at lines 1--2
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+Overfull \hbox (172.52968pt too wide) in paragraph at lines 2--92
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+(./graph/kruskal.cpp) (./graph/lca-pd.cpp
+Overfull \hbox (57.3296pt too wide) in paragraph at lines 22--23
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (57.3296pt too wide) in paragraph at lines 23--25
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.32957pt too wide) in paragraph at lines 26--27
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[7] [8]) (./graph/link_cut.cpp [9]) (./graph/lis.cpp) (./graph/segtree.cpp) (./graph/tarjan.cpp [10]) (./graph/union-find.cpp) (./math/Phi.cpp
+Overfull \hbox (4.52936pt too wide) in paragraph at lines 25--26
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[11]) (./math/binomial_coefficient.cpp) (./math/bit.cpp) (./math/expRap.cpp) (./math/fast-fib.cpp) (./math/fft.cpp [12]) (./math/gcd.cpp) (./math/lcm.cpp) (./math/sieve.cpp) (./math/sums.cpp) (./string/corasick.cpp [13]) (./string/hash.cpp) (./string/prefixfunc.cpp) (./string/suffix_array.cpp [14]) (./string/suffixaut.cpp [15]) (./string/zfunc.cpp) [16] (/Users/segala/Git/icpc-reference/.texpadtmp/biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 5520 strings out of 492995
- 72310 string characters out of 6132704
- 225868 words of memory out of 5000000
- 8944 multiletter control sequences out of 15000+600000
+ 6140 strings out of 492995
+ 78916 string characters out of 6132704
+ 209868 words of memory out of 5000000
+ 9468 multiletter control sequences out of 15000+600000
  11450 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,58p,249b,1834s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,58p,249b,1856s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on /Users/segala/Git/icpc-reference/.texpadtmp/biblioteca.pdf (3 pages, 68362 bytes).
+Output written on /Users/segala/Git/icpc-reference/.texpadtmp/biblioteca.pdf (16 pages, 111881 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 77 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
