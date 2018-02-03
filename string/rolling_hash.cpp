@@ -1,3 +1,8 @@
+
+const string A { "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" };
+const ll B = 41;            // Base = 41
+const ll P = 1000000007;    // Prime = 10^9 + 7
+
 ll fast_mod_exp(ll x, ll n, ll p) {
     ll y = 1, base = x;
     while (n) {
@@ -7,10 +12,6 @@ ll fast_mod_exp(ll x, ll n, ll p) {
     }
     return y; // = x^n (mod p)
 }
-
-const string A { "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" };
-const ll B = 41;            // Base = 41
-const ll P = 1000000007;    // Prime = 10^9 + 7
 
 ll idA(char c) {
     return A.find(c);
