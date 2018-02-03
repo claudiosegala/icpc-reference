@@ -13,7 +13,7 @@ vector<int> strong_borders (const string& pat) {
     return sbord;
 }
 
-int KMP(const string& text, const string& pat) {
+int kmp (const string& text, const string& pat) {
     int n = text.size(), m = pat.size(), i = 0, j = 0, occ = 0;
     vector<int> bords = strong_borders(pat);
 
