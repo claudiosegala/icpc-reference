@@ -12,11 +12,9 @@ hash calc_hash(int beg, int end) {
 
 void init() {
 	pw[0] = 1ULL;
-	for (int i=1; i<MAXN; ++i) {
-        pw[i] = pw[i-1]*BASE;
-    }
-    h[0] = 0ULL;
-    for (int j=0; s[j]!='\0'; ++j) {
-        h[j+1] = h[j]*BASE + VALUE(s[j]);
-    }
+	for (int i=1; i<MAXN; ++i)
+		pw[i] = pw[i-1]*BASE;
+	h[0] = 0ULL;
+	for (int j=0; s[j]!='\0'; ++j)
+		h[j+1] = h[j]*BASE + VALUE(s[j]);
 }
