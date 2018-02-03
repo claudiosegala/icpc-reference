@@ -1,4 +1,3 @@
-
 const string A { "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" };
 const ll B = 41;            // Base = 41
 const ll P = 1000000007;    // Prime = 10^9 + 7
@@ -17,8 +16,26 @@ ll idA(char c) {
     return A.find(c);
 }
 
+// perfect when |A| can be represented in n bits and m <= 64/n
+// wont be needed to check with patterns match
+//ll hash_function2 (const string& s, int pos, ll prev, int m, int n) {
+//    ll res = 0;
+//
+//    if (pos == 0) {
+//        for (int i = 0; i < m; ++i) {
+//            res <<= n;
+//            res |= idA(s[i]);
+//        }
+//    } else {
+//        ll mask = (1 << n*m) - 1;
+//        res = ((prev << n) | idA(s[pos + m - 1])) & mask;
+//    }
+//
+//    return res;
+//}
+
 // res = f(s[pos..pos + m - 1]), size = |A|, prev = f(s[pos-1..pos+m])
-ll f(const string& s, int pos, ll prev, int m) {
+ll hash_function (const string& s, int pos, ll prev, int m) {
     ll res = 0;
 
     if (pos == 0) { // hash(S)=(∑(M,i=0) Si∗pi)%MOD
@@ -35,11 +52,11 @@ ll f(const string& s, int pos, ll prev, int m) {
 
 int rolling_hash(const string& text, const string& pattern) {
     ll m = pattern.size(), n = text.size(), cnt = 0;
-    ll r = f(pattern, 0, 0, m), h = 0;
+    ll r = hash_function(pattern, 0, 0, m), h = 0;
 
     for (int i = 0; i < n - m + 1; ++i) {
-        h = f(text, i, h, m);
-        if (h == r) ++cnt; // and text.substr(i, m) == pattern 
+        h = hash_function(text, i, h, m);
+        if (h == r and text.substr(i, m) == pattern) ++cnt;
     }
 
     return cnt;
