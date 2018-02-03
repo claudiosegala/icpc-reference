@@ -1,4 +1,3 @@
-// find bords that works
 vector<int> strong_borders (const string& pat) {
     int m = pat.size(), t = -1;
     vector<int> sbord(m + 1);
