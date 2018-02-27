@@ -14,8 +14,8 @@ using namespace std;
 #define ep 					 1e-9
 #define pb 					 push_back
 
-typedef long long ll
-typedef unsigned long long ul
+typedef long long ll;
+typedef unsigned long long ul;
 
 int main() {
 	ios::sync_with_stdio(false);
