@@ -1,7 +1,7 @@
 class SegTree{
-	vector<int> st, st2, id;
+	vector<int> st;
 	vector<int> lazy;
-	int
+	int n;
 	void prop(int p, int L, int R){
 		if(lazy[p]){
 			st[p] += lazy[p];
@@ -44,8 +44,8 @@ public:
 
 	SegTree(int sz){
 		n = sz;
-		st.assign(6*(n + 1), 0);
-		lazy.assign(6*(n + 1), 0);
+		st.assign(8*(n + 1), 0);
+		lazy.assign(8*(n + 1), 0);
 	}
 
 	int qry(int i, int j){
