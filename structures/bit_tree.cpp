@@ -3,9 +3,7 @@ class BIT {
 	
 	int query (int i) {
 		int ans = 0;
-
 		for (; i > 0; i -= i&-i) ans += v[i];
-
 		return ans;
 	}
 
