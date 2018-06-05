@@ -2,50 +2,52 @@ class SegTree{
 	vector<int> st;
 	vector<int> lazy;
 	int n;
-	void prop(int p, int L, int R){
+	void prop(int p, int nodeL, int nodeR){
 		if(lazy[p]){
 			st[p] += lazy[p];
-			lazy[2*p] += lazy[p];
-			lazy[2*p+1] += lazy[p];
+			if(nodeL != nodeR){
+				lazy[2*p] += lazy[p];
+				lazy[2*p+1] += lazy[p];
+			}
 			lazy[p] = 0;
 		}
 	}
 
-	void upd(int p, int L, int R, int i, int j, int v){
-		prop(p, L, R);
+	void upd(int p, int nodeL, int nodeR, int queryL, int queryR, int v){
+		prop(p, nodeL, nodeR);
 
-		if(j < L || i > R) return;
-		if(i <= L && R <= j){
+		if(queryR <  nodeL or  queryL >  nodeR) return;
+		if(queryL <= nodeL and queryR >= nodeL){
 			lazy[p] = v;
-			prop(p, L, R);
+			prop(p, nodeL, nodeR);
 			return;
 		}
 
-		int mid = (L+R)/2;
+		int mid = (nodeL + nodeR) / 2;
 
-		upd(2*p, L, mid, i, j, v);
-		upd(2*p+1, mid+1, R, i, j, v);
+		upd(2*p,   nodeL, mid,   queryL, queryR, v);
+		upd(2*p+1, mid+1, nodeR, queryL, queryR, v);
 
-		st[p] = max(st[2*p],st[2*p+1]);
+		st[p] = max(st[2*p], st[2*p+1]);
 	}
 	
-	int qry(int p, int L, int R, int i, int j){
-		prop(p, L, R);
+	int qry(int p, int nodeL, int nodeR, int queryL, int queryR){
+		prop(p, nodeL, nodeR);
 
-		if(j < L || i > R) return 0;
-		if(i <= L && R <= j) return st[p];
+		if(queryR <  nodeL or  queryL >  nodeR) return 0;
+		if(queryL <= nodeL and queryR >= nodeL) return st[p];
 
-		int mid = (L+R)/2;
+		int mid = (nodeL + nodeR) / 2;
 
-		return max(qry(2*p, L, mid, i, j), qry(2*p+1, mid+1, R, i, j));
+		return max(qry(2*p, nodeL, mid, queryL, queryR), qry(2*p+1, mid+1, nodeR, queryL, queryR));
 	}
 
 public:
 
 	SegTree(int sz){
 		n = sz;
-		st.assign(8*(n + 1), 0);
-		lazy.assign(8*(n + 1), 0);
+		st.assign(5*(n + 1), 0);
+		lazy.assign(5*(n + 1), 0);
 	}
 
 	int qry(int i, int j){
