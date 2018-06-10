@@ -17,7 +17,7 @@ class SegTree{
 		prop(p, nodeL, nodeR);
 
 		if(queryR <  nodeL or  queryL >  nodeR) return;
-		if(queryL <= nodeL and queryR >= nodeL){
+		if(queryL <= nodeL and queryR >= nodeR){
 			lazy[p] = v;
 			prop(p, nodeL, nodeR);
 			return;
