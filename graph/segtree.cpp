@@ -35,7 +35,7 @@ class SegTree{
 		prop(p, nodeL, nodeR);
 
 		if(queryR <  nodeL or  queryL >  nodeR) return 0;
-		if(queryL <= nodeL and queryR >= nodeL) return st[p];
+		if(queryL <= nodeL and queryR >= nodeR) return st[p];
 
 		int mid = (nodeL + nodeR) / 2;
 
