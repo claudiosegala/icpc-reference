@@ -1,7 +1,7 @@
 Assign each person to be free;
   	while (some man m is free) do
   	begin
-  		w := first woman on m’s list;
+  		w := first woman on m s list;
   		m proposes, and becomes engaged, to w;
   		if (some man m' is engaged to w) then
   		    assign m' to be free;
