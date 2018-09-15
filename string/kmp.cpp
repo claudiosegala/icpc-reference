@@ -3,7 +3,7 @@ vector<int> strong_borders (const string& pat) {
     vector<int> sbord(m + 1);
     
     sbord[0] = -1;
-    for (int j = 1; j <= m; ++j) {  // t é igual a bord[j - 1]
+    for (int j = 1; j <= m; ++j) {  // t eh igual a bord[j - 1]
         while (t >= 0 and pat[t] != pat[j - 1]) t = sbord[t];
         ++t;
         if (j == m or pat[t] != pat[j])  sbord[j] = t;
