@@ -1,72 +1,101 @@
-#define MAXN 250000
+#include <bits/stdc++.h>
+#include <unistd.h>
+using namespace std;
 
-struct state_t {
-	int len, link;
-	map< char, int > next;
+#define FOR(i,a,b) for(int i = a; i < (int)b;i++)
+using ll = long long;
+#define ff first
+#define ss second
+#define debug(x) cout << #x" = '" << x << "'" << endl
 
-    bool clone;
-    int first_pos;
-    vector<int> inv_link;
-    
-    int cnt, nxt;
-};
+using uint = unsigned int;
 
-int sz, last;
-state_t state[2*MAXN];
 
-void automata_init() {
-	sz = last = 0;
-	state[0].len = 0;
-	state[0].link = -1;
-	++sz;
-}
+// using vi = int[94];
+// intcmpCh(char c){ return c-33; }
 
-void automata_extend(char c) {
-	int cur = sz++;
-	state[cur].len = state[last].len+1;
-    state[cur].first_pos = state[last].len;
-    state[cur].cnt = 1;
-    int p = last;
-    
-	for (; p != -1 && !state[p].next.count(c); p = state[p].link) {
-		state[p].next[c] = cur;
-    }
-    
-	if (p == -1) {
-        state[cur].link = 0;
-	} else {
-		int q = state[p].next[c];
-		if (state[p].len+1 == state[q].len) {
-            state[cur].link = q;
-		} else {
-			int clone = sz++;
-			state[clone].len = state[p].len+1;
-			state[clone].next = state[q].next;
-			state[clone].link = state[q].link;
-            state[clone].first_pos = state[q].first_pos;
-            state[clone].clone = true;
-			for (; p != -1 && state[p].next[c]==q; p=state[p].link) {
-				state[p].next[c] = clone;
+// using vi = int[52];
+// int cmpCh(char c){ if(c>='a')return c-'a';return c-'A'+26; }
+
+using vi = int[26];
+int cmpCh(char c){ return c-'a'; }
+
+
+class sufAuto{
+	const uint v0 = 1;
+	struct Tvert{
+		vi c;
+		int suf=0, len=0;
+	};
+	int& suf(int vert){ return verts[vert].suf; }
+	int& len(int vert){ return verts[vert].len; }
+	// void fim(int vert){ if(vert > 0)finals.insert(vert),fim(suf(vert)); }
+	vi& ch(int vert){ return verts[vert].c; }
+public:
+	uint cnt=0, v1=1, last=1, sz=1;
+	vector<Tvert> verts;
+	sufAuto(){}
+	sufAuto(const string &s){ addStr(s); }
+	void addStr(const string &s){
+		uint n = s.size();
+		sz += 2*n;
+		verts.resize(sz);
+
+		uint v2=0, v3=0, v4=0, v5=0, c;
+		FOR(i,0,n){
+			c = cmpCh(s[i]);
+			v2 = ++last;
+			len(v2) = len(v1) + 1;
+			for(v3 = v1;v3 && !ch(v3)[c];){
+				ch(v3)[c] = v2;
+				v3 = suf(v3);
 			}
-            state[q].link = state[cur].link = clone;
+			if(!v3){
+				suf(v2) = v0;
+				v1 = v2;
+				continue;
+			}
+			v4 = ch(v3)[c];
+			if(len(v4) == len(v3)+1){
+				suf(v2) = v4;
+				v1 = v2;
+				continue;
+			}
+			v5 = ++last;
+			verts[v5] = verts[v4];
+			len(v5) = len(v3)+1;
+			suf(v2) = v5;
+			suf(v4) = v5;
+			while(ch(v3)[c] == v4){
+				ch(v3)[c] = v5;
+				v3 = suf(v3);
+			}
+			v1 = v2;
 		}
 	}
-	last = cur;
-}
+	bool hasSubstr(const string &s){
+		if(last==1)return false;
+		int vert=v0;
+		for(char c : s){
+			vert = verts[vert].c[cmpCh(c)];
+			if(!vert)return false;
+		}
+		return true;
+	}
+};
 
-for (int v = 1; v < sz; ++v)
-    state[ state[v].link ].inv_link.push_back(v);
+char s[100010];
+int main(){
+	char c;
+	sufAuto sa;
 
-int first[n+1];
-memset(first,-1,sizeof(first));
-for (int v = 0; v < sz; ++v) {
-    state[v].nxt = first[state[v].len];
-    first[state[v].len] = v;
-}
-
-for (int i = n; i >= 0; --i) {
-    for (int u = first[i]; u != -1; u = state[u].nxt) {
-        if (state[u].link != -1)
-            state[ state[u].link ].cnt += state[u].cnt;
-    }
+	while(scanf(" %c %s",&c,s) == 2){
+		for(int i = 0; s[i]; i++) s[i] = tolower(s[i]);
+		if(c == 'A') sa.addStr(s);
+		else{
+			if(sa.hasSubstr(s)) printf("YES\n");
+			else printf("NO\n");
+		}
+	}
+	return 0;
 }
