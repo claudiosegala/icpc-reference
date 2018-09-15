@@ -1,25 +1,5 @@
-#include <bits/stdc++.h>
-#include <unistd.h>
-using namespace std;
-
-#define FOR(i,a,b) for(int i = a; i < (int)b;i++)
-using ll = long long;
-#define ff first
-#define ss second
-#define debug(x) cout << #x" = '" << x << "'" << endl
-
-using uint = unsigned int;
-
-
-// using vi = int[94];
-// intcmpCh(char c){ return c-33; }
-
-// using vi = int[52];
-// int cmpCh(char c){ if(c>='a')return c-'a';return c-'A'+26; }
-
 using vi = int[26];
 int cmpCh(char c){ return c-'a'; }
-
 
 class sufAuto{
 	const uint v0 = 1;
@@ -74,11 +54,11 @@ public:
 		}
 	}
 	bool hasSubstr(const string &s){
-		if(last==1)return false;
+		if(last==1) return false;
 		int vert=v0;
 		for(char c : s){
 			vert = verts[vert].c[cmpCh(c)];
-			if(!vert)return false;
+			if(!vert) return false;
 		}
 		return true;
 	}
