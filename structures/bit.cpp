@@ -18,6 +18,6 @@ public:
 	}
 
 	int query (int i, int j) {
-		return query(b) - query(a-1);
+		return query(j) - query(i-1);
 	}
 };
