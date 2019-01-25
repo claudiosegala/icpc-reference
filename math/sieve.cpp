@@ -1,9 +1,3 @@
-#include "template.hpp"
-
-///////////////
-// CRIVO DE ERASTHOTENES
-///////////////
-
 void sieveErathostenes(vector<int>& out, int n){
 	vector<bool> v(n+1,false);
 	out.push_back(2);
