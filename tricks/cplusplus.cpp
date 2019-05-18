@@ -1,6 +1,12 @@
 // lambda functions
 sort(p, p+n, [=](int i, int j) { return p[i] < p[j]; });
 
+// next_permutation
+next_permutation(myints,myints+3); // there is also prev_
+
+scanf("%x"); // le como hexadecimal
+scanf("%e"); // le como notacao cientifica
+
 string r_str =
 R"Multi Line
 String";
