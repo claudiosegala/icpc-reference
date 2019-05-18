@@ -10,6 +10,7 @@ int pw(int b,int a){
 	return ans;
 }
 
+// create the debruijn sequence
 void debruijn( int n, int k ){
 	seq = "";
 	char s[n];
