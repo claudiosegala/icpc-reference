@@ -11,7 +11,7 @@ cout « r_str;
 long long operator "" _km(unsigned long long literal) {
   return literal * 1000;
 }
-cout « 12_km « " meters \n"; // Prints 12000 meters
+cout << 12_km << " meters \n"; // Prints 12000 meters
 
 // define a any-type sum function:
 int sum() { return 0; }
@@ -30,3 +30,7 @@ __builtin_clz(x)
 __builtin_ctz(x)
 // returns number of 1-bits of x. x is unsigned int and like previous function this function with suffix 'l' gets a unsigned long argument and with suffix 'll' gets a unsigned long long argument. If x == 0, returns an undefined value
 __builtin_popcount(x)
+
+// loop through all submask of a given bitmask
+// it does not include mask 0
+for(int sub = mask; sub; sub = (sub-1)&mask) {}
